@@ -32,7 +32,7 @@ class DevelopmentModeWatchSpec extends Specification {
         watchedFile.write 'foo.bar=baz'
 
         then:
-        pollingCondition.within(2, {
+        pollingCondition.within(25, {
             assert plugin.fileIsChanged.endsWith('testWatchedFile.properties')
         })
 
