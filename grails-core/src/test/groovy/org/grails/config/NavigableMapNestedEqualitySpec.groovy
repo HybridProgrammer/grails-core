@@ -153,6 +153,7 @@ grails:
         expect:
         config.getProperty('grails.mime.types', Map) == ( config.grails.mime.types )
         config.getProperty('grails.mime.types', Map).is( config.grails.mime.types )
+        !config.getProperty('dataSource')
 
 
     }
